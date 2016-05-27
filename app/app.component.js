@@ -20,7 +20,7 @@ var AppComponent = (function () {
     };
     AppComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
+            selector: 'seed-app',
             templateUrl: 'app/app.component.html',
             providers: [router_deprecated_1.ROUTER_PROVIDERS],
             directives: [components_1.Components, router_deprecated_1.ROUTER_DIRECTIVES]

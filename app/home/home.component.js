@@ -10,8 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var components_1 = require('angular2-ui/components');
+var providers_1 = require('angular2-ui/providers');
 var HomeComponent = (function () {
-    function HomeComponent() {
+    function HomeComponent(elementRef, modal) {
+        this.elementRef = elementRef;
+        this.modal = modal;
         this.items = [
             new ListItem('Thing 1', true),
             new ListItem('Thing 2', false),
@@ -19,6 +22,15 @@ var HomeComponent = (function () {
             new ListItem('The Other Thing', false),
         ];
     }
+    HomeComponent.prototype.showModal = function () {
+        //this.modal.show({
+        //	template: '<p> This is a modal </p>',
+        //	templateUrl: null,
+        //	keyboard: true,
+        //	parent: this.elementRef
+        //});
+        this.modal.alert('OMG, What just happened', 'Something really weird happened, a modal appeared!');
+    };
     HomeComponent.prototype.itemDisplay = function (x) {
         return x.name;
     };
@@ -31,11 +43,13 @@ var HomeComponent = (function () {
     };
     HomeComponent = __decorate([
         core_1.Component({
-            selector: 'home',
+            //The angular 2 team recommends prefixing all of your components. This is to prevent naming collisions with libraries that you pull in.
+            selector: 'seed-home',
             templateUrl: 'app/home/home.component.html',
-            directives: [components_1.Components]
+            directives: [components_1.Components],
+            providers: [providers_1.UIModalService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [core_1.ElementRef, providers_1.UIModalService])
     ], HomeComponent);
     return HomeComponent;
 }());

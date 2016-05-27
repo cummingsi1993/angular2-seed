@@ -4,7 +4,7 @@ import { Components } from 'angular2-ui/components';
 import { HomeComponent } from './home/home.component';
 
 @Component({
-  selector: 'my-app',
+  selector: 'seed-app',
   templateUrl: 'app/app.component.html',
   providers: [ROUTER_PROVIDERS],
   directives: [Components, ROUTER_DIRECTIVES]

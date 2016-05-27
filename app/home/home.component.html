@@ -1,3 +1,31 @@
-<div>
-	<ui-list [items]="items" [display-fn]="itemDisplay" [active-fn]="itemActive" [selected-fn]="onItemSelect"></ui-list>
-</div>
+<ui-container fluid="true">
+
+	<ui-row>
+		<ui-column md-width="5">
+
+			<ui-card>
+				<ui-list [items]="items" [display-fn]="itemDisplay" [active-fn]="itemActive" [selected-fn]="onItemSelect"></ui-list>
+			</ui-card>
+		</ui-column>
+
+		<ui-column md-width="5">
+			<ui-card>
+				<ui-card-block>
+					<ui-card-title>
+						<h4>This is a title!</h4>
+					</ui-card-title>
+					<ui-card-text>
+						<p>This is inside of a card</p>
+					</ui-card-text>
+					<div>
+						<ui-button theme="success" (click)="showModal()">Show Modal</ui-button>	
+					</div>
+				</ui-card-block>
+				
+			</ui-card>
+		</ui-column>
+		
+
+		
+	</ui-row>
+</ui-container>

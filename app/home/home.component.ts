@@ -1,15 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Inject } from '@angular/core';
 import { Components } from 'angular2-ui/components'
+import { UIModalService } from 'angular2-ui/providers';
 
 @Component({
-	selector:'home',
+	//The angular 2 team recommends prefixing all of your components. This is to prevent naming collisions with libraries that you pull in.
+	selector:'seed-home',
 	templateUrl: 'app/home/home.component.html',
-	directives: [Components]
+	directives: [Components],
+	providers: [UIModalService]
 })
 export class HomeComponent { 
 
 
-	constructor() { 
+	constructor(private elementRef: ElementRef, private modal: UIModalService) { 
 
 		this.items = [
 			new ListItem('Thing 1', true),
@@ -21,6 +24,16 @@ export class HomeComponent {
 	}
 
 	items:ListItem[];
+
+	showModal() { 
+		//this.modal.show({
+		//	template: '<p> This is a modal </p>',
+		//	templateUrl: null,
+		//	keyboard: true,
+		//	parent: this.elementRef
+		//});
+		this.modal.alert('OMG, What just happened', 'Something really weird happened, a modal appeared!');
+	}
 
 	itemDisplay(x:ListItem){
 		return x.name;

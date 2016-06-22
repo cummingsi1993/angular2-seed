@@ -9,8 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var components_1 = require('angular2-ui/components');
-var providers_1 = require('angular2-ui/providers');
+var index_1 = require('angular2-ui/index');
 var HomeComponent = (function () {
     function HomeComponent(elementRef, modal) {
         this.elementRef = elementRef;
@@ -46,10 +45,10 @@ var HomeComponent = (function () {
             //The angular 2 team recommends prefixing all of your components. This is to prevent naming collisions with libraries that you pull in.
             selector: 'seed-home',
             templateUrl: 'app/home/home.component.html',
-            directives: [components_1.Components],
-            providers: [providers_1.UIModalService]
+            directives: [index_1.UI_COMPONENTS],
+            providers: [index_1.UIModalService]
         }), 
-        __metadata('design:paramtypes', [core_1.ElementRef, providers_1.UIModalService])
+        __metadata('design:paramtypes', [core_1.ElementRef, index_1.UIModalService])
     ], HomeComponent);
     return HomeComponent;
 }());

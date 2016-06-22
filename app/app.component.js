@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
-var components_1 = require('angular2-ui/components');
+var index_1 = require('angular2-ui/index');
 var home_component_1 = require('./home/home.component');
 var AppComponent = (function () {
     function AppComponent() {
@@ -23,7 +23,7 @@ var AppComponent = (function () {
             selector: 'seed-app',
             templateUrl: 'app/app.component.html',
             providers: [router_deprecated_1.ROUTER_PROVIDERS],
-            directives: [components_1.Components, router_deprecated_1.ROUTER_DIRECTIVES]
+            directives: [index_1.UI_COMPONENTS, router_deprecated_1.ROUTER_DIRECTIVES]
         }),
         router_deprecated_1.RouteConfig([{
                 path: '/home',

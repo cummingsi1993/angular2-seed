@@ -1,12 +1,11 @@
 import { Component, ElementRef, Inject } from '@angular/core';
-import { Components } from 'angular2-ui/components'
-import { UIModalService } from 'angular2-ui/providers';
+import { UI_COMPONENTS, UIModalService } from 'angular2-ui/index';
 
 @Component({
 	//The angular 2 team recommends prefixing all of your components. This is to prevent naming collisions with libraries that you pull in.
 	selector:'seed-home',
 	templateUrl: 'app/home/home.component.html',
-	directives: [Components],
+	directives: [UI_COMPONENTS],
 	providers: [UIModalService]
 })
 export class HomeComponent { 
